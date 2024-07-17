@@ -1,6 +1,6 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import {Inter} from 'next/font/google';
+import {Poppins} from 'next/font/google';
 import NavBarContainer from "@/components/NavBarContainer";
 import Footer from "@/components/Footer";
 
@@ -9,18 +9,18 @@ TODO:  Change these things along with:
   - avatar.jpeg in /public/images
   - favicon.ico in /public
  */
-const font = Inter({ weight: 'variable', subsets: ['latin']})
+const font = Poppins({ weight: '700', subsets: ['latin']})
 const title = 'Luke\'s Site';
 const description = 'This my personal site';
 const links = [
-  {title: 'Pokemon', href: '/pokemon'},
+  {title: 'Google', href: 'https://www.google.com'},
   {title: 'Rick and Morty', href: '/rick-and-morty'}
 ];
 const SocialLinks = {
-  twitter: '#twitter',
+  twitter: 'https://x.com/dunscombe_luke',
   github: '#github',
   instagram: '#insta',
-  email: 'mailto:your-email@gmail.com'
+  email: 'mailto:ldunscombe@leantechniques.com'
 }
 
 export const metadata: Metadata = {
