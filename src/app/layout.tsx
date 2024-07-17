@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <html lang="en" className={'h-full'}>
+      <html lang="en" className={'h-full'} data-theme="dark">
       <body className={`${font.className} flex flex-col min-h-screen`}>
       <NavBarContainer title={title} links={links}>
         <main className={'flex-1 max-w-6xl py-8 md:py-16 px-4 md:px-0'}>{children}</main>

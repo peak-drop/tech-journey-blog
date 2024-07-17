@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaGithub, FaRegEnvelope, FaTwitter, FaInstagram} from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import Link from "next/link";
 import type {IconType} from "react-icons";
 
@@ -24,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({socialLinks}) => {
           {/*<p>Copyright © 2023 - All right reserved</p>*/}
         </div>
         <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-          {socialLinks.twitter && <SocialLink link={socialLinks.twitter} Icon={FaTwitter}/>}
+          {socialLinks.twitter && <SocialLink link={socialLinks.twitter} Icon={FaXTwitter}/>}
           {socialLinks.github && <SocialLink link={socialLinks.github} Icon={FaGithub}/>}
           {socialLinks.instagram && <SocialLink link={socialLinks.instagram} Icon={FaInstagram}/>}
           {socialLinks.email && <SocialLink link={socialLinks.email} Icon={FaRegEnvelope}/>}
