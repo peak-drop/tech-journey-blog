@@ -20,8 +20,11 @@ const RickAndMortyTable: React.FC<RickAndMortyTableProps> = () => {
   const search = searchParams.get('search') || '';
   const page = isNaN(initialPage) ? 1 : initialPage;
 
-  const {data} = useQuery(['characters', page, search], async () => {
-    return await fetchCharacters(page, search)
+  const {data} = useQuery({
+    queryKey: ['characters', page, search],
+    queryFn: async () => {
+      return await fetchCharacters(page, search)
+    }
   })
 
   return (

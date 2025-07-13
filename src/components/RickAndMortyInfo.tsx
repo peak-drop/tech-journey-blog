@@ -1,13 +1,10 @@
 'use client';
 
 import React, {useCallback} from 'react';
-import {QueryClient} from "@tanstack/query-core";
-import {QueryClientProvider, useQuery} from "@tanstack/react-query";
-import {fetchCharacters, Info} from "@/lib/rick-and-morty";
-import {useRouter, useSearchParams} from "next/navigation";
+import {Info} from "@/lib/rick-and-morty";
+import {useRouter} from "next/navigation";
 import {FaAngleLeft, FaAngleRight} from 'react-icons/fa';
 import invariant from "tiny-invariant";
-import RickAndMortyCharacter from "@/components/RickAndMortyCharacter";
 import {useDebounce} from "@/utils/use-debounce";
 
 interface RickAndMortyInfoProps {
