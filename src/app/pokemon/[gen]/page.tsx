@@ -4,13 +4,13 @@ import invariant from "tiny-invariant";
 import Pokemon from "@/components/Pokemon";
 
 type Props = {
-  params: {
+  params: Promise<{
     gen: string
-  }
+  }>
 }
 
 export default async function PokemonGenPage(props: Props) {
-  const gen = Number(props.params.gen);
+  const gen = Number((await props.params).gen);
   const generations = await fetchGenerations()
   const validGenerations = generations.generations.map(x => x.id);
   invariant(validGenerations.includes(gen), `Generation ${gen} is invalid`)

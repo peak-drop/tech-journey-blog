@@ -2,9 +2,9 @@ import Date from '@/components/Date'
 import {getPostData} from '@/lib/posts'
 
 type Props = {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
 type PostData = {
@@ -13,7 +13,8 @@ type PostData = {
   contentHtml: string
 }
 
-export async function generateMetadata({params}: Props) {
+export async function generateMetadata(props: Props) {
+  const params = await props.params;
   const postData: PostData = await getPostData(params.id)
 
   return {
@@ -21,7 +22,8 @@ export async function generateMetadata({params}: Props) {
   }
 }
 
-export default async function Post({params}: Props) {
+export default async function Post(props: Props) {
+  const params = await props.params;
   const postData: PostData = await getPostData(params.id)
 
   return (
