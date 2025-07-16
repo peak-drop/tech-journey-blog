@@ -1,6 +1,6 @@
 ---
 title: 'Tech Journey 2024 - Poker'
-date: '2024-07-17'
+date: '2025-07-17'
 ---
 
 In poker, knowing the best hands helps you win. The top hand is a Royal Flush (A, K, Q, J, 10 of the same suit), which
