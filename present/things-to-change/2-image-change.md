@@ -10,7 +10,7 @@ Change the src link here to something fun.
 // Change this url to change the image!
 const imageUrl = '/images/snorlax.jpg';
 // to
-const imageUrl = '/images/{name-of-file}';
+const imageUrl = '/images/{14996.png}';
 ```
 
 ## Bonus Challenge: 
